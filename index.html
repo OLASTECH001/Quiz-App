@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="project.css" />
+</head>
+<body>
+  <div class="quiz-container">
+
+    <!-- START SCREEN -->
+    <div id="start-screen">
+      <h1>Quiz App</h1>
+      <label>
+        Number of Questions:
+        <input type="number" id="num-questions" min="1" max="20" value="5" />
+      </label>
+      <label>
+        Category:
+        <select id="category">
+          <option value="">Any</option>
+          <option value="9">General Knowledge</option>
+          <option value="21">Sports</option>
+          <option value="23">History</option>
+          <option value="17">Science & Nature</option>
+          <option value="18">Computers</option>
+        </select>
+      </label>
+      <label>
+        Difficulty:
+        <select id="difficulty">
+          <option value="">Any</option>
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </label>
+      <label>
+        Select total quiz time:
+        <select id="quiz-time">
+          <option value="1">1 min</option>
+          <option value="5">5 mins</option>
+          <option value="10">10 mins</option>
+          <option value="15">15 mins</option>
+          <option value="20">20 mins</option>
+          <option value="30">30 mins</option>
+          <option value="60">1 hour</option>
+        </select>
+      </label>
+      <button id="start-btn">Start Quiz</button>
+    </div>
+
+    <!-- LOADING SCREEN -->
+    <div id="loading" class="hide">
+      <h2>Loading Questions...</h2>
+    </div>
+
+    <!-- QUIZ SCREEN -->
+    <div id="quiz" class="hide">
+      <div id="progress">Question 1 of 5</div>
+      <div id="timer">Time Left: <span id="time-left">10s</span></div>
+      <p id="question">Question text goes here...</p>
+      <div class="choices">
+        <button class="choice">Option 1</button>
+        <button class="choice">Option 2</button>
+        <button class="choice">Option 3</button>
+        <button class="choice">Option 4</button>
+      </div>
+      <div>
+        <button id="prev-btn">Previous</button>
+        <button id="next-btn">Next</button>
+        <button id="submit-btn">Submit Quiz</button>
+
+      </div>
+    </div>
+
+    <!-- RESULT SCREEN -->
+    <div id="result" class="hide">
+      <h2>Your Score: <span id="score"></span></h2>
+      <button id="restart-btn">Restart Quiz (New Settings)</button>
+      <button id="restart-current-btn">Restart This Quiz</button>
+    </div>
+
+  </div>
+
+  <script src="project.js"></script>
+</body>
+</html>
